@@ -5,6 +5,11 @@ const Home = () => {
   return (
     <View className="flex items-center pt-6">
       <Text>Home page will be coming soon!</Text>
+      <Text>Home page will be coming soon!</Text>
+      <Text>Home page will be coming soon!</Text>
+      <Text>Home page will be coming soon!</Text>
+      <Text>Home page will be coming soon!</Text>
+      <Text>Home page will be coming soon!</Text>
     </View>
   )
 }

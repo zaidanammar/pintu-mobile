@@ -12,6 +12,7 @@ web-build/
 *.jpg
 *.png
 *.ttf
+eslintignore
 
 # macOS
 .DS_Store
