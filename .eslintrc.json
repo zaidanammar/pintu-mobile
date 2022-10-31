@@ -6,11 +6,7 @@
     "prettier",
     "plugin:prettier/recommended"
   ],
-  "plugins": [
-    "@typescript-eslint",
-    "react",
-    "prettier"
-  ],
+  "plugins": ["@typescript-eslint", "react", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -33,16 +29,12 @@
     "no-use-before-define": "off",
     "react/prop-types": 0,
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": [
-      "error"
-    ],
+    "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/naming-convention": [
       "error",
       {
         "selector": "interface",
-        "format": [
-          "PascalCase"
-        ],
+        "format": ["PascalCase"],
         "custom": {
           "regex": "^I[A-Z]",
           "match": false
@@ -51,9 +43,7 @@
     ],
     "@typescript-eslint/no-explicit-any": "off", // temprary set to off
     "@typescript-eslint/ban-ts-comment": "off", // temporary set to off
-    "camelcase": [
-      "off"
-    ],
+    "camelcase": ["off"],
     "implicit-arrow-linebreak": "off",
     "import/extensions": "off",
     "import/no-anonymous-default-export": "off",
@@ -97,9 +87,7 @@
     "no-restricted-exports": [
       "off",
       {
-        "restrictedNamedExports": [
-          "default"
-        ]
+        "restrictedNamedExports": ["default"]
       }
     ],
     "no-underscore-dangle": "off",
@@ -114,12 +102,7 @@
     "react/jsx-filename-extension": [
       "error",
       {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     ],
     "react/jsx-handler-names": "warn",
@@ -131,10 +114,7 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "semi": [
-      "warn",
-      "never"
-    ],
+    "semi": ["warn", "never"],
     "react/no-children-prop": "off",
     "react/no-unstable-nested-components": "off",
     "react/no-unescaped-entities": "off"
