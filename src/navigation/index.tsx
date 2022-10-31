@@ -16,7 +16,7 @@ import { ColorSchemeName, Pressable, View } from 'react-native'
 
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
-import { RootStackParamList, RootTabParamList } from '../types'
+import { RootStackParamList, RootTabParamList } from '../types/types'
 import LinkingConfiguration from './LinkingConfiguration'
 import {
   Home,

@@ -1,6 +1,6 @@
 import { ScrollView } from 'react-native'
 import { Text, View } from '../components/Themed'
-import { RootTabScreenProps } from '../types'
+import { RootTabScreenProps } from '../types/types'
 
 const Market = ({ navigation }: RootTabScreenProps<'Market'>) => {
   return (
