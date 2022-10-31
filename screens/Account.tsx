@@ -3,8 +3,8 @@ import { Text, View } from '../components/Themed'
 
 const Account = () => {
   return (
-    <View>
-      <Text>Account</Text>
+    <View className="flex items-center pt-6">
+      <Text>Account page will be coming soon!</Text>
     </View>
   )
 }

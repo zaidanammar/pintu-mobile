@@ -1,10 +1,31 @@
+import { ScrollView } from 'react-native'
 import { Text, View } from '../components/Themed'
 import { RootTabScreenProps } from '../types'
 
 const Market = ({ navigation }: RootTabScreenProps<'Market'>) => {
   return (
     <View>
-      {/* <Text className="text-fuchsia-400 text-7xl">Tab One</Text> */}
+      <ScrollView>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+        <Text className="text-fuchsia-400 text-7xl">Tab One</Text>
+      </ScrollView>
     </View>
   )
 }

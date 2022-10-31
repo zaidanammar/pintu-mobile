@@ -16,14 +16,16 @@ import { ColorSchemeName, Pressable, View } from 'react-native'
 
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
-import Account from '../screens/Account'
-import Discover from '../screens/Discover'
-import Home from '../screens/Home'
-import Market from '../screens/Market'
-import NotFoundScreen from '../screens/NotFoundScreen'
-import Wallet from '../screens/Wallet'
 import { RootStackParamList, RootTabParamList } from '../types'
 import LinkingConfiguration from './LinkingConfiguration'
+import {
+  Home,
+  Account,
+  Discover,
+  Market,
+  Wallet,
+  NotFoundScreen,
+} from '../screens'
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
@@ -32,7 +34,7 @@ const TabBarIcon = (props: {
   name: React.ComponentProps<typeof Ionicons>['name']
   color: string
 }) => {
-  return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />
+  return <Ionicons size={24} style={{ marginBottom: -3 }} {...props} />
 }
 
 /**
@@ -92,7 +94,7 @@ const BottomTabNavigator = () => {
                 >
                   <FontAwesome
                     name="star-o"
-                    size={25}
+                    size={24}
                     color={Colors[colorScheme].text}
                     style={{ marginRight: 15 }}
                   />

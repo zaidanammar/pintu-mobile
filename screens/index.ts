@@ -1,0 +1,6 @@
+export { default as Home } from './Home.tsx'
+export { default as Discover } from './Discover.tsx'
+export { default as Market } from './Market.tsx'
+export { default as Wallet } from './Wallet.tsx'
+export { default as Account } from './Account.tsx'
+export { default as NotFoundScreen } from './NotFoundScreen.tsx'

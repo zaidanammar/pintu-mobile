@@ -3,8 +3,8 @@ import { Text, View } from '../components/Themed'
 
 const Discover = () => {
   return (
-    <View>
-      <Text>Home</Text>
+    <View className="flex items-center pt-6">
+      <Text>Discover page will be coming soon!</Text>
     </View>
   )
 }
