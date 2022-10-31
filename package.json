@@ -9,10 +9,10 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "prepare": "husky install",
-    "lint": "eslint --ext .tsx --ext .ts src/",
-    "lint:fix": "eslint --ext .tsx --ext .ts src/ --fix",
-    "format": "prettier --check ./src",
-    "format:fix": "npx prettier --write ./src"
+    "lint": "eslint --ext .tsx --ext .ts .",
+    "lint:fix": "eslint --ext .tsx --ext .ts . --fix",
+    "format": "prettier --check .",
+    "format:fix": "npx prettier --write ."
   },
   "jest": {
     "preset": "jest-expo"
@@ -64,10 +64,10 @@
   },
   "private": true,
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "eslint --ext .tsx --ext .ts src/ --fix"
+    "/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts . --fix"
     ],
-    "./src/**": [
+    "/**": [
       "prettier --write ."
     ]
   },
