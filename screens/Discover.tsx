@@ -1,5 +1,7 @@
 import React from 'react'
-import { Text, View } from '../components/Themed'
+
+import Text from '../components/atoms/Text'
+import View from '../components/atoms/View'
 
 const Discover = () => {
   return (
