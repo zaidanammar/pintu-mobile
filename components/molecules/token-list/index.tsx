@@ -9,6 +9,7 @@ import View from '../../atoms/view'
 import type { Currency } from '../../../types/currency'
 import type { Token } from '../../../types/token'
 import MarketContext from '../../../store/market/context'
+import SkeletonList from '../skeleton/list'
 
 interface ItemType extends Currency {
   latestPrice: string
@@ -27,9 +28,7 @@ const TokenItem = ({ item }: TokenItemProps) => {
   const { sort } = MarketState
   return (
     <View className="flex flex-row py-4 px-2 gap-x-3 border-b border-b-neutral items-center">
-      <View className="bg-white rounded-full">
-        <SvgUri color={item.color} width={32} height={32} uri={item.logo} />
-      </View>
+      <SvgUri color={item.color} width={32} height={32} uri={item.logo} />
 
       <View className="flex-1 flex flex-row items-center font-text">
         <View className="flex-1">
@@ -51,11 +50,15 @@ const TokenItem = ({ item }: TokenItemProps) => {
 interface MoleculesTokenListProps {
   dataSupportedCurrencies: Currency[]
   dataTradePriceChanges: Token[]
+  loadTradePriceChanges: boolean
+  loadSupportedCurrencies: boolean
 }
 
 const MoleculesTokenList = ({
   dataSupportedCurrencies,
   dataTradePriceChanges,
+  loadSupportedCurrencies,
+  loadTradePriceChanges,
 }: MoleculesTokenListProps) => {
   const data =
     dataSupportedCurrencies &&
@@ -68,6 +71,10 @@ const MoleculesTokenList = ({
       year: dataTradePriceChanges[idx]?.year,
       ...el,
     }))
+
+  if (loadSupportedCurrencies || loadTradePriceChanges) {
+    return <SkeletonList />
+  }
 
   return (
     <ScrollView>

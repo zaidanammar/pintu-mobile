@@ -4,15 +4,14 @@ import {
   useFetchTradePriceChanges,
   useFetchWalletSupportedCurrencies,
 } from '../hooks/market'
-import Text from '../components/atoms/text'
-import View from '../components/atoms/view'
-import MarketHeader from '../components/organisms/market-header'
-import TokenList from '../components/molecules/token-list'
-import { MarketReducer } from '../store/market/reducer'
 import {
   initialMarketState,
   MarketContextProvider,
 } from '../store/market/context'
+import { MarketReducer } from '../store/market/reducer'
+import View from '../components/atoms/view'
+import MarketHeader from '../components/organisms/market-header'
+import TokenList from '../components/molecules/token-list'
 
 const Market = () => {
   const [MarketState, MarketDispatch] = useReducer(
@@ -30,16 +29,12 @@ const Market = () => {
       <View className="px-2.5">
         <ScrollView>
           <MarketHeader />
-          {loadTradePrices || LoadCurrencies ? (
-            <View>
-              <Text>loading</Text>
-            </View>
-          ) : (
-            <TokenList
-              dataSupportedCurrencies={dataSupportedCurrencies?.data}
-              dataTradePriceChanges={dataTradePriceChanges?.data}
-            />
-          )}
+          <TokenList
+            dataSupportedCurrencies={dataSupportedCurrencies?.data}
+            dataTradePriceChanges={dataTradePriceChanges?.data}
+            loadSupportedCurrencies={LoadCurrencies}
+            loadTradePriceChanges={loadTradePrices}
+          />
         </ScrollView>
       </View>
     </MarketContextProvider>
