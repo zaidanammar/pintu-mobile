@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar'
 import { useState } from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+import { NativeBaseProvider } from 'native-base'
 
 import useCachedResources from './hooks/useCachedResources'
 import useColorScheme from './hooks/useColorScheme'
@@ -18,7 +19,9 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <QueryClientProvider client={queryClient}>
-        <Navigation colorScheme={colorScheme} />
+        <NativeBaseProvider>
+          <Navigation colorScheme={colorScheme} />
+        </NativeBaseProvider>
       </QueryClientProvider>
       <StatusBar />
     </SafeAreaProvider>

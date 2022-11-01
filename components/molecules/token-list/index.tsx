@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { ScrollView } from 'react-native'
 import { SvgUri } from 'react-native-svg'
 
@@ -8,10 +8,14 @@ import TokenArrowText from '../../atoms/text/TokenArrowText'
 import View from '../../atoms/view'
 import type { Currency } from '../../../types/currency'
 import type { Token } from '../../../types/token'
+import MarketContext from '../../../store/market/context'
 
 interface ItemType extends Currency {
   latestPrice: string
-  percentage: string
+  day: string
+  week: string
+  month: string
+  year: string
 }
 
 interface TokenItemProps {
@@ -19,6 +23,8 @@ interface TokenItemProps {
 }
 
 const TokenItem = ({ item }: TokenItemProps) => {
+  const { MarketState } = useContext(MarketContext)
+  const { sort } = MarketState
   return (
     <View className="flex flex-row py-4 px-2 gap-x-3 border-b border-b-neutral items-center">
       <View className="bg-white rounded-full">
@@ -35,7 +41,7 @@ const TokenItem = ({ item }: TokenItemProps) => {
         <View className="flex flex-col items-end ml-2">
           <Text className="font-semibold">{toRupiah(item.latestPrice)}</Text>
 
-          <TokenArrowText percentage={item.percentage} />
+          <TokenArrowText percentage={item[sort]} />
         </View>
       </View>
     </View>
@@ -56,7 +62,10 @@ const MoleculesTokenList = ({
     dataTradePriceChanges &&
     dataSupportedCurrencies?.slice(1)?.map((el, idx) => ({
       latestPrice: dataTradePriceChanges[idx]?.latestPrice,
-      percentage: dataTradePriceChanges[idx]?.day,
+      day: dataTradePriceChanges[idx]?.day,
+      week: dataTradePriceChanges[idx]?.week,
+      month: dataTradePriceChanges[idx]?.month,
+      year: dataTradePriceChanges[idx]?.year,
       ...el,
     }))
 
