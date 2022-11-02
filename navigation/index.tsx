@@ -26,6 +26,7 @@ import {
   Wallet,
   NotFoundScreen,
 } from '../screens'
+import Text from '../components/atoms/text'
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
@@ -79,42 +80,45 @@ const BottomTabNavigator = () => {
         component={Market}
         options={() => ({
           headerTitleAlign: 'left',
-          headerTitle: 'Market',
+          headerTitle: () => (
+            <Text style={{ fontSize: 28, fontWeight: '600' }}>Market</Text>
+          ),
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="bar-chart" color={color} />
           ),
-          headerRight: () => {
-            return (
-              <View className="flex">
-                <Pressable
-                  style={({ pressed }) => ({
-                    opacity: pressed ? 0.5 : 1,
-                  })}
-                  className="flex flex-row"
-                >
-                  <FontAwesome
-                    name="star-o"
-                    size={24}
-                    color={Colors[colorScheme].text}
-                    style={{ marginRight: 15 }}
-                  />
-                </Pressable>
-                {/* <Pressable
-                  style={({ pressed }) => ({
-                    opacity: pressed ? 0.5 : 1,
-                  })}
-                  className="flex flex-row"
-                >
-                  <FontAwesome
-                    name="search"
-                    size={25}
-                    color={Colors[colorScheme].text}
-                    style={{ marginRight: 15 }}
-                  />
-                </Pressable> */}
-              </View>
-            )
-          },
+          headerRight: () => (
+            <View
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+              }}
+            >
+              <Pressable
+                style={({ pressed }) => ({
+                  opacity: pressed ? 0.5 : 1,
+                })}
+              >
+                <FontAwesome
+                  name="star-o"
+                  size={24}
+                  color={Colors[colorScheme].text}
+                  style={{ marginRight: 15 }}
+                />
+              </Pressable>
+              <Pressable
+                style={({ pressed }) => ({
+                  opacity: pressed ? 0.5 : 1,
+                })}
+              >
+                <FontAwesome
+                  name="search"
+                  size={22}
+                  color={Colors[colorScheme].text}
+                  style={{ marginRight: 15 }}
+                />
+              </Pressable>
+            </View>
+          ),
         })}
       />
       <BottomTab.Screen

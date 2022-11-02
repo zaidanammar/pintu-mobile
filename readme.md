@@ -81,8 +81,6 @@
 
 - App Preview
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
 Here's why:
@@ -133,7 +131,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    npm install or yarn install
    ```
-3. Enter your configuration project in `.env.local`, in a module you will work on
+3. Enter your configuration project in `.env`, in a module you will work on
    ```js
    NEXT_PUBLIC_API = 'ENTER YOUR SECRET KEY'
    ```
@@ -149,15 +147,7 @@ How to run a project, please follow the instructions below.
 1. Run the Project
 
 ```bash
-npm run dev or yarn dev
-```
-
-How to run a `storybook`, please follow the instructions below.
-
-1. Run the `storybook` in local
-
-```bash
-npm run dev:storybook or yarn dev:storybook
+npm run start or yarn start
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -166,11 +156,7 @@ npm run dev:storybook or yarn dev:storybook
 
 ## Roadmap
 
-- [x] Slicing components and replicate website `https://pintu.co.id/market`
-- [x] Add documentation using `storybook`
-- [x] Automate deploy using `vercel`
-- [ ] add unit testing components
-- [ ] Automate deploy storybook using `vercel`
+- [x] Slicing components and replicate pintu app
 
 See the [open issues](https://github.com/zaidanammar/pintu-mobile/issues) for a full list of proposed features (and known issues).
 
